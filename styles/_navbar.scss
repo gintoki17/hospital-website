@@ -1,0 +1,141 @@
+.navbar{
+    max-width: 133rem;
+    width: 100%;
+    height: 12vh;
+    background-color: white;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.7rem 2rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    margin: 0 auto;
+    right: 0;
+
+    &__img{
+        padding: 1rem;
+        margin-left: -20px;
+        width: 11.7rem;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__links{
+        display: flex;
+        list-style-type: none;
+        gap: 1.3rem;
+        a{
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        @media (max-width:1000px){
+            display: none;
+        }
+    }
+    &__buttons{
+        display: flex;
+        gap: 2.5rem;
+        font-weight: 500;
+        align-items: center;
+
+        a{
+            text-decoration: none;
+        }
+        @media(max-width: 1000px){
+            display: none;
+        }
+        &__sign-in{
+            color: #000;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+//mobile nav
+
+.mobile-hamb{
+    font-size: 2.4rem;
+    display: none;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover{
+        color: $secondary-color;
+    }
+
+    @media (max-width:1000px){
+        display: flex;
+    }
+}
+
+.mobile-navbar{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    background-color: white;
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+
+    &__close{
+        font-size: 2rem;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover{
+            color: $primary-color;
+        }
+    }
+
+    &__links{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        font-size: 1.5rem;
+        gap: 1.8rem;
+        text-align: center;
+
+        li{
+            a{
+                text-decoration: none;
+                color: #000;
+                font-weight: 500;
+                transition: all 0.3s;
+
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    
+}
+.open-nav{
+        left: 0;
+    }
