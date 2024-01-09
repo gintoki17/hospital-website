@@ -1,0 +1,95 @@
+.appointment{
+    width: 100%;
+    height: 500px;
+    background: url(../images/appointment/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom ;
+    position: relative;
+    margin-top: 5rem;
+    @media(max-width:400px){
+        background: none;
+        height: auto;
+    }
+    &-content{
+        width: 50%;
+        position: absolute;
+        height: 400px;
+        padding: 2.5rem;
+        top: 50px;
+        right: 50px;
+        text-align: left;
+        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(../images/appointment/bg2.png);
+       @media(max-width:400px){
+        width: 100%;
+        top:0;
+        right:0;
+       }
+
+        h3{
+            font-size: 1.8rem;
+            @media(max-width:400px){
+                font-size: 1.3rem;
+            }
+        }
+        p{
+            font-size: 15px;
+            color: rgb(101, 101, 101);
+            @media(max-width:400px){
+                font-size: 12px;
+            }
+        }
+        hr{
+            border: 1px solid gray;
+            width: 5%;
+            margin: 1rem 0;
+            @media(max-width:400px){width: 15%;}
+        }
+
+        .text{
+            color: #000;
+            margin-bottom: 1rem;
+            @media(max-width:400px){
+                font-size: 12px;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+        .progress{
+
+            &-top{
+                display: flex;
+                justify-content: space-between;
+
+                h4{
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+
+            .progressBarStyle {
+                width: 100%;
+                height: 10px;
+                background-color: #ccc; // Gray background color
+                border-radius: 10px;
+                margin: 10px 0;
+                overflow: hidden;
+        
+                .filledProgressBarStyle {
+                  width: 0; /* Initially set to 0 for animation */
+                  height: 100%;
+                  background-color: #3498db; // Change the color as needed
+                  border-radius: 10px;
+                  animation: fillProgressBar 2s ease-out forwards;
+                }
+              }
+
+        }
+    }
+    @keyframes fillProgressBar {
+        to {
+          width: 78%; /* Final width */
+        }
+      }
+}

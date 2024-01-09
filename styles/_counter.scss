@@ -1,0 +1,31 @@
+.counter{
+    padding: 2rem;
+    margin-top: 5rem;
+    @media(max-width:400px){
+        padding: 1rem;
+    }
+    .rows{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .row{
+            text-align: center;
+
+            h2{
+                font-size: 1.7rem;
+                @media(max-width:400px){
+                    font-size: 1.2rem;
+                }
+            }
+            p{
+                color: #000;
+                font-weight: 600;
+                @media(max-width:400px){
+                    font-size: 0.6rem;
+                    line-height: 1.3;
+                }
+            }
+        }
+    }
+}

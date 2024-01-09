@@ -1,0 +1,63 @@
+.faq{
+    margin-top: 10rem;
+    height: 100vh;
+    background: url(../images/faq/faq-bg.jpg), linear-gradient(to right, white 0%, white 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .faq-content{
+        width: 100%;
+        position: relative;
+        .consultation{
+            background-color: $secondary-color;
+            color: white;
+            width: 450px;
+            height: 400px;
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+
+            h3{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 13px;
+            }
+
+            form{
+                padding: 1rem 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap:1rem;
+
+                select,input{
+                    width: 180px;
+                    padding: 0.8rem 0;
+                    border: 6px solid transparent;
+                    border-color: #fff transparent transparent transparent;
+                }
+
+            }
+            .appointment-btn{
+                background-color: transparent;
+                color: white;
+                border: 2px solid white;
+                padding:  1rem;
+                cursor: pointer;
+                font-weight: 600;
+                border-radius: 2px;
+
+                &:hover{
+                    background-color: white;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+}
